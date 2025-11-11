@@ -1,0 +1,8 @@
+region               = "ap-south-1"
+vpc_id               = "vpc-0abc123def4567890"
+subnet_id            = "subnet-0123456789abcdef0"
+security_group_id    = "sg-0123abcd4567efgh8"
+ssm_instance_profile = "EC2-SSM-Role"
+ami_id               = "ami-0c55b159cbfafe1f0"
+instance_type        = "t3.micro"
+instance_name        = "tf-demo-instance"
