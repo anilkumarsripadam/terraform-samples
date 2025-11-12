@@ -45,5 +45,5 @@ variable "instance_type" {
 variable "instance_names" {
   description = "Tag Name for the EC2 instance"
   type        = list(string)
-  default     = ["ani-test-1", "ani-test-2"]
+  default     = ["ani-test-1", "ani-test-2", "ani-test-3"]
 }
