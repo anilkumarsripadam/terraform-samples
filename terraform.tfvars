@@ -5,4 +5,4 @@ security_group_id    = "sg-0321a4ac3c4feed8a"
 ssm_instance_profile = "EC2-connect"
 ami_id               = "ami-0ecb62995f68bb549"
 instance_type        = "t3.micro"
-instance_name        = ["ani-test-1", "ani-test-2"]
+instance_name        = ["ani-test-1", "ani-test-2", ani-test-3]
