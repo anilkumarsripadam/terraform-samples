@@ -57,10 +57,12 @@ resource "aws_instance" "tf_ec2" {
 # -----------------------------
 # Outputs
 # -----------------------------
-output "public_ip" {
-  value = aws_instance.tf_ec2.public_ip
+output "public_ips" {
+  description = "Public IPs of all EC2 instances"
+  value       = { for name, instance in aws_instance.tf_ec2 : name => instance.public_ip }
 }
 
-output "instance_id" {
-  value = aws_instance.tf_ec2.id
+output "instance_ids" {
+  description = "IDs of all EC2 instances"
+  value       = { for name, instance in aws_instance.tf_ec2 : name => instance.id }
 }
