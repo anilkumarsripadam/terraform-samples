@@ -45,5 +45,5 @@ variable "instance_type" {
 variable "instance_name" {
   description = "Tag Name for the EC2 instance"
   type        = string
-  default     = ["ani-est-1"]
+  default     = "tf-demo-instance"
 }
