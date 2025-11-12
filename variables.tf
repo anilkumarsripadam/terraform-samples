@@ -42,8 +42,8 @@ variable "instance_type" {
 }
 
 # Instance Name Tag
-variable "instance_name" {
+variable "instance_names" {
   description = "Tag Name for the EC2 instance"
   type        = list(string)
-  default     = ["ani-test-1", test-2]
+  default     = ["ani-test-1", "ani-test-2"]
 }
