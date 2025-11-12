@@ -40,6 +40,8 @@ data "aws_security_group" "existing_sg" {
 # EC2 Instance
 # -----------------------------
 resource "aws_instance" "tf_ec2" {
+  for_each = toset(var.instance_names)
+
   ami                         = var.ami_id
   instance_type               = var.instance_type
   subnet_id                   = data.aws_subnet.existing.id
@@ -48,7 +50,7 @@ resource "aws_instance" "tf_ec2" {
   associate_public_ip_address = true
 
   tags = {
-    Name = var.instance_name
+    Name = each.value
   }
 }
 
